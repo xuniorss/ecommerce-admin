@@ -1,3 +1,4 @@
+import { ModalProvider } from '@/providers/modal-provider'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
@@ -15,7 +16,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
    return (
       <ClerkProvider>
          <html lang="pt-BR">
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+               <ModalProvider />
+               {children}
+            </body>
          </html>
       </ClerkProvider>
    )
