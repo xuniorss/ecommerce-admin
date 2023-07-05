@@ -1,6 +1,7 @@
 import prismadb from '@/lib/prismadb'
 import { auth, UserButton } from '@clerk/nextjs'
 import { redirect } from 'next/navigation'
+
 import { MainNav } from '../MainNav'
 import { StoreSwitcher } from '../StoreSwitcher'
 import { ThemeToggle } from '../ThemeToggle'
